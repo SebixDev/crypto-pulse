@@ -1,11 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>crypto-pulse</title>
+    <title>Crypto Pulse - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="dark-theme">
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area">
+                <span class="logo-icon">⚡</span>
+                <h2>Crypto <span class="accent-text">Pulse</span></h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Watchlist</a>
+                <a href="#">Märkte</a>
+                <a href="#">Einstellungen</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Nach Krypto suchen (z.B. BTC, ETH)...">
+                </div>
+                <div class="market-status">
+                    <span class="status-dot"></span> Markt Live
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                
+                <section class="card chart-card">
+                    <h3>Bitcoin (BTC) - Live Trend</h3>
+                    <div class="chart-placeholder">
+                        <p>Chart-Bereich (wird über API geladen)</p>
+                    </div>
+                </section>
+
+                <section class="card table-card">
+                    <h3>Top Kryptowährungen</h3>
+                    <table class="crypto-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Preis</th>
+                                <th>24h Änderung</th>
+                                <th>Marktkapitalisierung</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crypto-table-body">
+                            <tr>
+                                <td>1</td>
+                                <td class="coin-name"><strong>Bitcoin</strong> <span class="ticker">BTC</span></td>
+                                <td>$64,250.00</td>
+                                <td class="price-up">+2.4%</td>
+                                <td>$1.26T</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="coin-name"><strong>Ethereum</strong> <span class="ticker">ETH</span></td>
+                                <td>$3,450.00</td>
+                                <td class="price-down">-0.8%</td>
+                                <td>$415B</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
